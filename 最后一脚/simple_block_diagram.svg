@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Microsoft YaHei, SimHei, Arial, sans-serif">
+  <defs>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="ctrlGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="#f4f6f7"/>
+
+  <text x="600" y="42" text-anchor="middle" font-size="26" font-weight="bold" fill="#2c3e50">&#x81EA;&#x52A8;&#x5316;&#x5305;&#x88C5;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x6846;&#x56FE;</text>
+  <text x="600" y="65" text-anchor="middle" font-size="13" fill="#7f8c8d">Automated Packaging Control System</text>
+
+  <g id="sensors">
+    <rect x="20" y="90" width="300" height="540" rx="12" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1.5"/>
+    <text x="170" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a085">&#x4F20;&#x611F;&#x5668; INPUT</text>
+    <text x="170" y="140" text-anchor="middle" font-size="11" fill="#7f8c8d">Sensors</text>
+
+    <g transform="translate(40, 160)">
+      <rect x="0" y="0" width="260" height="70" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+      <text x="130" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="white">TJC &#x4E32;&#x53E3;&#x5C4F;</text>
+      <text x="130" y="46" text-anchor="middle" font-size="11" fill="#e8daef">USART3 &#x00B7; &#x4EBA;&#x673A;&#x4EA4;&#x4E92;</text>
+      <text x="130" y="62" text-anchor="middle" font-size="9" fill="#d2b4de">&#x5E27;&#x683C;&#x5F0F;: 0xAA + CMD</text>
+    </g>
+
+    <g transform="translate(40, 245)">
+      <rect x="0" y="0" width="260" height="55" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="24" text-anchor="start" font-size="13" font-weight="bold" fill="white">&#x7EA2;&#x5916;&#x4F20;&#x611F;&#x5668; IR</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">&#x5927;&#x8471;&#x8BA1;&#x6570; / &#x906E;&#x6321;&#x89E6;&#x53D1;</text>
+      <text x="220" y="33" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PE8 &#x00B7; PB6</text>
+    </g>
+
+    <g transform="translate(40, 315)">
+      <rect x="0" y="0" width="260" height="55" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="24" text-anchor="start" font-size="13" font-weight="bold" fill="white">&#x8D85;&#x58F0;&#x6CE2;&#x4F20;&#x611F;&#x5668; HC-SR04</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">&#x8DDD;&#x79BB;&#x68C0;&#x6D4B;</text>
+      <text x="220" y="33" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PB0 &#x00B7; PD3</text>
+    </g>
+
+    <g transform="translate(40, 385)">
+      <rect x="0" y="0" width="260" height="55" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="24" text-anchor="start" font-size="13" font-weight="bold" fill="white">&#x7070;&#x5EA6;&#x4F20;&#x611F;&#x5668; Gray</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">&#x819C;&#x4F4D;&#x7F6E;&#x68C0;&#x6D4B;</text>
+      <text x="220" y="33" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PE7</text>
+    </g>
+
+    <g transform="translate(40, 455)">
+      <rect x="0" y="0" width="260" height="55" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="24" text-anchor="start" font-size="13" font-weight="bold" fill="white">&#x9650;&#x4F4D;&#x5F00;&#x5173; Limit</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">&#x4E1D;&#x6746;&#x9650;&#x4F4D;</text>
+      <text x="220" y="33" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PE0 &#x00B7; PE1</text>
+    </g>
+
+    <g transform="translate(40, 525)">
+      <rect x="0" y="0" width="260" height="55" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="24" text-anchor="start" font-size="13" font-weight="bold" fill="white">B7 &#x5230;&#x4F4D;&#x4F20;&#x611F;&#x5668;</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">&#x6253;&#x5305;&#x4F4D;&#x7F6E;&#x68C0;&#x6D4B;</text>
+      <text x="220" y="33" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PB7</text>
+    </g>
+
+    <g transform="translate(40, 595)">
+      <rect x="0" y="0" width="260" height="25" rx="6" fill="#7f8c8d" stroke="#95a5a6" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="15" y="17" text-anchor="start" font-size="11" font-weight="bold" fill="white">&#x8C03;&#x8BD5;&#x4E32;&#x53E3; USART1</text>
+      <text x="245" y="17" text-anchor="middle" font-size="9" fill="#f4f6f6" font-weight="bold">PA9/PA10</text>
+    </g>
+  </g>
+
+  <g id="controller">
+    <rect x="370" y="90" width="280" height="540" rx="15" fill="url(#ctrlGrad)" stroke="#1a5276" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="370" y="90" width="280" height="55" rx="15" fill="#1a5276"/>
+    <rect x="370" y="125" width="280" height="20" fill="#1a5276"/>
+    <text x="510" y="127" text-anchor="middle" font-size="20" font-weight="bold" fill="white">&#x63A7;&#x5236;&#x5668; CONTROLLER</text>
+
+    <g transform="translate(420, 170)">
+      <rect x="0" y="0" width="180" height="75" rx="10" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+      <text x="90" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="white">STM32F103</text>
+      <text x="90" y="58" text-anchor="middle" font-size="13" fill="#85c1e9">ARM Cortex-M3</text>
+    </g>
+
+    <g transform="translate(395, 265)">
+      <rect x="0" y="0" width="230" height="160" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+      <text x="115" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#f39c12">&#x5DE5;&#x827A;&#x6D41;&#x7A0B;&#x72B6;&#x6001;&#x673A;</text>
+
+      <ellipse cx="55" cy="50" rx="38" ry="18" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+      <text x="55" y="55" text-anchor="middle" font-size="11" fill="white" font-weight="bold">IDLE</text>
+
+      <ellipse cx="115" cy="85" rx="45" ry="18" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+      <text x="115" y="90" text-anchor="middle" font-size="10" fill="white" font-weight="bold">BELT_RUN</text>
+
+      <ellipse cx="175" cy="50" rx="42" ry="18" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+      <text x="175" y="55" text-anchor="middle" font-size="10" fill="white" font-weight="bold">PACK_...</text>
+
+      <ellipse cx="115" cy="120" rx="38" ry="18" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+      <text x="115" y="125" text-anchor="middle" font-size="11" fill="white" font-weight="bold">STOP</text>
+
+      <path d="M88 55 Q100 65 105 80" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arr-blue)"/>
+      <path d="M155 80 Q145 65 145 55" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arr-blue)"/>
+      <path d="M55 68 L55 102" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arr-blue)"/>
+      <path d="M175 68 L175 102 L145 102" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arr-blue)"/>
+      <path d="M115 102 L115 70" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arr-blue)"/>
+    </g>
+
+    <g transform="translate(395, 440)">
+      <rect x="0" y="0" width="230" height="180" rx="8" fill="#2c3e50" stroke="#34495e" stroke-width="1"/>
+      <text x="115" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1abc9c">&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x8BF4;&#x660E;</text>
+
+      <text x="12" y="45" font-size="10" fill="#aab7b8">&#x2460; &#x4E32;&#x53E3;&#x5C4F;&#x53D1;&#x9001; 0x9A &#x542F;&#x52A8;&#x547D;&#x4EE4;</text>
+      <text x="12" y="63" font-size="10" fill="#aab7b8">&#x2461; &#x540C;&#x6B65;&#x5E26;&#x8FD0;&#x884C;&#xFF0C;&#x7EA2;&#x5916;&#x8BA1;&#x6570;</text>
+      <text x="12" y="81" font-size="10" fill="#aab7b8">&#x2462; &#x8BA1;&#x6570;&#x8FBE;3&#x6B21;&#xFF0C;&#x8FDB;&#x5165;&#x6253;&#x5305;&#x6D41;&#x7A0B;</text>
+      <text x="12" y="99" font-size="10" fill="#aab7b8">&#x2463; &#x53F6;&#x8F6E;+&#x4F20;&#x9001;&#x5E26;+&#x6253;&#x5305;&#x7535;&#x673A;&#x534F;&#x540C;</text>
+      <text x="12" y="117" font-size="10" fill="#aab7b8">&#x2464; &#x819C;&#x6746;&#x62C9;&#x819C;+&#x5207;&#x819C;</text>
+      <text x="12" y="135" font-size="10" fill="#aab7b8">&#x2465; &#x6253;&#x5305;&#x5B8C;&#x6210;&#xFF0C;&#x7B49;&#x5F85;&#x4E0B;&#x6B21;&#x542F;&#x52A8;</text>
+      <text x="12" y="160" font-size="10" fill="#e74c3c">&#x6CE8;&#x610F;: IR&#x8BA1;&#x6570; | &#x7070;&#x5EA6;&#x5B9A;&#x4F4D; | B7&#x5230;&#x4F4D;</text>
+    </g>
+  </g>
+
+  <g id="actuators">
+    <rect x="700" y="90" width="480" height="540" rx="12" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1.5"/>
+    <text x="940" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#e74c3c">&#x6267;&#x884C;&#x673A;&#x6784; OUTPUT</text>
+    <text x="940" y="140" text-anchor="middle" font-size="11" fill="#7f8c8d">Actuators</text>
+
+    <text x="720" y="168" font-size="13" font-weight="bold" fill="#2c3e50">&#x6B65;&#x8FDB;&#x7535;&#x673A;</text>
+
+    <g transform="translate(720, 178)">
+      <rect x="0" y="0" width="210" height="70" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="white">&#x540C;&#x6B65;&#x5E26;&#x6B65;&#x8FDB;&#x7535;&#x673A;</text>
+      <text x="105" y="42" text-anchor="middle" font-size="11" fill="#fadbd8">Belt Stepper</text>
+      <text x="105" y="58" text-anchor="middle" font-size="10" fill="#f5b7b1">&#x8FD0;&#x8F93;&#x5927;&#x8471;</text>
+    </g>
+
+    <g transform="translate(950, 178)">
+      <rect x="0" y="0" width="210" height="70" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="white">&#x4E1D;&#x6746;&#x6B65;&#x8FDB;&#x7535;&#x673A;</text>
+      <text x="105" y="42" text-anchor="middle" font-size="11" fill="#fadbd8">Screw Stepper</text>
+      <text x="105" y="58" text-anchor="middle" font-size="10" fill="#f5b7b1">&#x4E0A;&#x4E0B;&#x79FB;&#x52A8;</text>
+    </g>
+
+    <g transform="translate(720, 263)">
+      <rect x="0" y="0" width="210" height="70" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="white">M3 &#x4F20;&#x9001;&#x5E26;&#x6B65;&#x8FDB;</text>
+      <text x="105" y="42" text-anchor="middle" font-size="11" fill="#e8daef">Conveyor Stepper</text>
+      <text x="105" y="58" text-anchor="middle" font-size="10" fill="#d2b4de">&#x6253;&#x5305;&#x4F20;&#x9001;</text>
+    </g>
+
+    <g transform="translate(950, 263)">
+      <rect x="0" y="0" width="210" height="70" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="white">M4 &#x6253;&#x5305;&#x6B65;&#x8FDB;</text>
+      <text x="105" y="42" text-anchor="middle" font-size="11" fill="#e8daef">Pack Stepper</text>
+      <text x="105" y="58" text-anchor="middle" font-size="10" fill="#d2b4de">&#x819C;&#x5377;&#x7EB9;&#x7ED5;</text>
+    </g>
+
+    <text x="720" y="355" font-size="13" font-weight="bold" fill="#2c3e50">&#x76F4;&#x6D41;&#x7535;&#x673A;</text>
+
+    <g transform="translate(720, 365)">
+      <rect x="0" y="0" width="210" height="60" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="23" text-anchor="middle" font-size="13" font-weight="bold" fill="white">&#x5207;&#x5272;&#x76F4;&#x6D41;&#x7535;&#x673A;</text>
+      <text x="105" y="42" text-anchor="middle" font-size="11" fill="#fdebd0">Cutting DC Motor</text>
+      <text x="105" y="55" text-anchor="middle" font-size="10" fill="#f5d5a0">PC6</text>
+    </g>
+
+    <g transform="translate(950, 365)">
+      <rect x="0" y="0" width="210" height="60" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="23" text-anchor="middle" font-size="13" font-weight="bold" fill="white">&#x5207;&#x819C;&#x76F4;&#x6D41;&#x7535;&#x673A;</text>
+      <text x="105" y="42" text-anchor="middle" font-size="11" fill="#fdebd0">Film Cutting Motor</text>
+      <text x="105" y="55" text-anchor="middle" font-size="10" fill="#f5d5a0">PC9 &#x00B7; PD8 &#x00B7; PD9</text>
+    </g>
+
+    <text x="720" y="447" font-size="13" font-weight="bold" fill="#2c3e50">&#x603B;&#x7EBF;&#x8235;&#x673A;</text>
+
+    <g transform="translate(720, 457)">
+      <rect x="0" y="0" width="210" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="white">&#x53F6;&#x8F6E;&#x8235;&#x673A; STS3020</text>
+      <text x="105" y="43" text-anchor="middle" font-size="11" fill="#aed6f1">Impeller Servo</text>
+      <text x="105" y="58" text-anchor="middle" font-size="10" fill="#85c1e9">ID3 &#x00B7; ID8</text>
+      <text x="105" y="72" text-anchor="middle" font-size="9" fill="#5dade2">&#x53F6;&#x8F6E;&#x63A7;&#x5236;</text>
+    </g>
+
+    <g transform="translate(950, 457)">
+      <rect x="0" y="0" width="210" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#shadow)"/>
+      <text x="105" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="white">&#x819C;&#x6746;&#x8235;&#x673A; STS360</text>
+      <text x="105" y="43" text-anchor="middle" font-size="11" fill="#aed6f1">Film Rod Servo</text>
+      <text x="105" y="58" text-anchor="middle" font-size="10" fill="#85c1e9">ID2 &#x00B7; ID7</text>
+      <text x="105" y="72" text-anchor="middle" font-size="9" fill="#5dade2">&#x62C9;&#x819C;/&#x63A8;&#x819C;</text>
+    </g>
+
+    <text x="720" y="559" font-size="13" font-weight="bold" fill="#2c3e50">&#x7EE7;&#x7535;&#x5668;&#x4E0E;&#x9644;&#x4EF6;</text>
+
+    <g transform="translate(720, 569)">
+      <rect x="0" y="0" width="440" height="55" rx="8" fill="#2c3e50" stroke="#34495e" stroke-width="2" filter="url(#shadow)"/>
+      <text x="220" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#f1c40f">&#x7EE7;&#x7535;&#x5668; Relays</text>
+
+      <rect x="15" y="30" width="80" height="20" rx="4" fill="#27ae60" stroke="#1e8449" stroke-width="1"/>
+      <text x="55" y="44" text-anchor="middle" font-size="10" font-weight="bold" fill="white">K_AIR PB12</text>
+
+      <rect x="110" y="30" width="80" height="20" rx="4" fill="#27ae60" stroke="#1e8449" stroke-width="1"/>
+      <text x="150" y="44" text-anchor="middle" font-size="10" font-weight="bold" fill="white">K_PUMP PB13</text>
+
+      <rect x="205" y="30" width="80" height="20" rx="4" fill="#27ae60" stroke="#1e8449" stroke-width="1"/>
+      <text x="245" y="44" text-anchor="middle" font-size="10" font-weight="bold" fill="white">K_S PA15</text>
+
+      <rect x="300" y="30" width="80" height="20" rx="4" fill="#16a085" stroke="#117a65" stroke-width="1"/>
+      <text x="340" y="44" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Fan E6</text>
+
+      <rect x="395" y="30" width="30" height="20" rx="4" fill="#7f8c8d" stroke="#6c7a7a" stroke-width="1"/>
+      <text x="410" y="44" text-anchor="middle" font-size="8" fill="white">...</text>
+    </g>
+  </g>
+
+  <path d="M320 195 Q345 195 370 205" fill="none" stroke="#9b59b6" stroke-width="3" marker-end="url(#arr-blue)"/>
+  <path d="M320 273 Q345 273 370 270" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arr-green)"/>
+  <path d="M320 343 Q345 343 370 335" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arr-green)"/>
+  <path d="M320 413 Q345 413 370 400" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arr-green)"/>
+  <path d="M320 483 Q345 483 370 465" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arr-green)"/>
+  <path d="M320 553 Q345 553 370 530" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arr-green)"/>
+  <path d="M320 608 Q345 608 370 595" fill="none" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <path d="M650 207 Q680 207 700 200" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arr-red)"/>
+  <path d="M650 213 Q680 213 700 215" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arr-red)"/>
+  <path d="M650 263 Q680 263 700 268" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arr-red)"/>
+  <path d="M650 269 Q680 269 700 283" fill="none" stroke="#9b59b6" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M650 298 Q680 298 700 308" fill="none" stroke="#e67e22" stroke-width="2" marker-end="url(#arr-red)"/>
+  <path d="M650 304 Q680 304 700 318" fill="none" stroke="#e67e22" stroke-width="2" marker-end="url(#arr-red)"/>
+  <path d="M650 347 Q680 347 700 357" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M650 353 Q680 353 700 368" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M650 497 Q680 497 700 507" fill="none" stroke="#27ae60" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <g transform="translate(20, 648)">
+    <rect x="0" y="0" width="1160" height="40" rx="5" fill="#2c3e50"/>
+
+    <g transform="translate(25, 12)">
+      <rect width="12" height="12" fill="#9b59b6" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x4EBA;&#x673A;&#x4EA4;&#x4E92;</text>
+    </g>
+
+    <g transform="translate(110, 12)">
+      <rect width="12" height="12" fill="#16a085" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x4F20;&#x611F;&#x5668;</text>
+    </g>
+
+    <g transform="translate(180, 12)">
+      <rect width="12" height="12" fill="#3498db" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x63A7;&#x5236;&#x5668;</text>
+    </g>
+
+    <g transform="translate(250, 12)">
+      <rect width="12" height="12" fill="#e74c3c" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x6B65;&#x8FDB;&#x7535;&#x673A;</text>
+    </g>
+
+    <g transform="translate(330, 12)">
+      <rect width="12" height="12" fill="#e67e22" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x76F4;&#x6D41;&#x7535;&#x673A;</text>
+    </g>
+
+    <g transform="translate(410, 12)">
+      <rect width="12" height="12" fill="#9b59b6" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">M3/M4</text>
+    </g>
+
+    <g transform="translate(465, 12)">
+      <rect width="12" height="12" fill="#3498db" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x603B;&#x7EBF;&#x8235;&#x673A;</text>
+    </g>
+
+    <g transform="translate(540, 12)">
+      <rect width="12" height="12" fill="#27ae60" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x7EE7;&#x7535;&#x5668;</text>
+    </g>
+
+    <g transform="translate(610, 12)">
+      <rect width="12" height="12" fill="#7f8c8d" rx="2"/>
+      <text x="17" y="10" font-size="10" fill="white">&#x8C03;&#x8BD5;&#x4E32;&#x53E3;</text>
+    </g>
+
+    <g transform="translate(740, 12)">
+      <line x1="0" y1="6" x2="35" y2="6" stroke="#f1c40f" stroke-width="2"/>
+      <polygon points="30,2 37,6 30,10" fill="#f1c40f"/>
+      <text x="45" y="10" font-size="10" fill="white">&#x63A7;&#x5236;&#x4FE1;&#x53F7;</text>
+    </g>
+  </g>
+
+</svg>

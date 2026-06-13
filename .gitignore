@@ -1,0 +1,38 @@
+# STM32 编译产物
+*.o
+*.crf
+*.d
+*.axf
+*.hex
+*.iex
+*.lst
+*.map
+*.lnp
+*.sct
+*.Bak
+*.dep
+*.build_log.htm
+*.htm
+
+# 编译输出目录
+Output/
+Listing/
+
+# Python
+__pycache__/
+*.pyc
+
+# Office 临时文件
+~$*
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# Keil 用户选项（因人而异）
+*.uvoptx
+
+# 操作系统
+.DS_Store
+Thumbs.db

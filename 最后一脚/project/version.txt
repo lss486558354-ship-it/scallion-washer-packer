@@ -1,0 +1,18 @@
+版本号：ver_01.00.00.demo
+备份时间：2026_04_05
+更新类型：大版本
+更新内容：
+- 修复了CMD_PROCESS_START命令(AA 30 00 9A)发送后STM32无ACK响应的问题
+- 增大了Protocol任务栈(384→512字)和Process任务栈(384→512字)
+- 修复了USART1互斥锁永久阻塞问题(portMAX_DELAY→5ms超时)
+- 在USART2中断中添加了LED翻转调试，确认硬件中断是否触发
+- 在Protocol_CommChannel_HandleByte中添加了调试日志
+- Protocol_SendACK返回通道改为s_current_channel，确保ACK发到正确的UART
+
+本次改动原因：
+用户反映AA 30 00 9A命令发送后STM32无ACK响应，但启动日志正常，所有FreeRTOS任务均已启动
+
+待验证事项：
+- 重新烧录后LED是否闪烁（判断USART2中断是否触发）
+- UART1调试串口是否输出[Task] Protocol started
+- 发送AA 30 00 9A后是否收到ACK响应帧

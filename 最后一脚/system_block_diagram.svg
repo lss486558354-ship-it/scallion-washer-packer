@@ -1,0 +1,303 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" font-family="Microsoft YaHei, SimHei, Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e67e22"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <linearGradient id="controllerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect width="1400" height="900" fill="#f8f9fa"/>
+  
+  <text x="700" y="45" text-anchor="middle" font-size="28" font-weight="bold" fill="#2c3e50">čŞĺ¨ĺĺčŁć§ĺśçłťçťćĄĺž</text>
+  <text x="700" y="70" text-anchor="middle" font-size="14" fill="#7f8c8d">Automated Packaging Control System Block Diagram</text>
+  
+  <g id="sensors-section">
+    <rect x="20" y="95" width="360" height="720" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+    <text x="200" y="130" text-anchor="middle" font-size="20" font-weight="bold" fill="#27ae60">äź ćĺ¨čžĺĽ INPUT</text>
+    <text x="200" y="150" text-anchor="middle" font-size="12" fill="#7f8c8d">Sensors and Human Interface</text>
+    
+    <g transform="translate(40, 170)">
+      <rect x="0" y="0" width="320" height="70" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+      <text x="160" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="white">TJC ä¸˛ĺŁč§Ść¸ĺą</text>
+      <text x="160" y="45" text-anchor="middle" font-size="11" fill="#e8daef">Serial Touch Screen (USART3)</text>
+      <text x="160" y="60" text-anchor="middle" font-size="10" fill="#d2b4de">ĺčŽŽ: 0xAA + CMD</text>
+    </g>
+    
+    <g transform="translate(40, 260)">
+      <rect x="0" y="0" width="320" height="60" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="25" text-anchor="start" font-size="13" font-weight="bold" fill="white">çş˘ĺ¤äź ćĺ¨ IR</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">ćŁćľĺ¤§čąĺ­ĺ¨ / Detect Onion</text>
+      <text x="280" y="35" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PE8, PB6</text>
+    </g>
+    
+    <g transform="translate(40, 340)">
+      <rect x="0" y="0" width="320" height="60" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="25" text-anchor="start" font-size="13" font-weight="bold" fill="white">čśĺŁ°ćł˘äź ćĺ¨ HC-SR04</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">čˇçŚťćľé / Distance</text>
+      <text x="280" y="35" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PB0, PD3</text>
+    </g>
+    
+    <g transform="translate(40, 420)">
+      <rect x="0" y="0" width="320" height="60" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="25" text-anchor="start" font-size="13" font-weight="bold" fill="white">ç°ĺşŚäź ćĺ¨ Gray</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">čä˝ç˝ŽćŁćľ / Film Position</text>
+      <text x="280" y="35" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PE7</text>
+    </g>
+    
+    <g transform="translate(40, 500)">
+      <rect x="0" y="0" width="320" height="60" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="25" text-anchor="start" font-size="13" font-weight="bold" fill="white">éä˝ĺźĺł Limit</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">ä¸ćä˝ç˝Žéä˝ / Screw Limits</text>
+      <text x="280" y="35" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PE0, PE1</text>
+    </g>
+    
+    <g transform="translate(40, 580)">
+      <rect x="0" y="0" width="320" height="60" rx="8" fill="#16a085" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="25" text-anchor="start" font-size="13" font-weight="bold" fill="white">B7 äź ćĺ¨</text>
+      <text x="20" y="42" text-anchor="start" font-size="11" fill="#a2d9ce">ĺčŁä˝ç˝ŽćŁćľ / Pack Position</text>
+      <text x="280" y="35" text-anchor="middle" font-size="10" fill="#e8f8f5" font-weight="bold">PB7</text>
+    </g>
+    
+    <g transform="translate(40, 660)">
+      <rect x="0" y="0" width="320" height="50" rx="8" fill="#7f8c8d" stroke="#95a5a6" stroke-width="2" filter="url(#shadow)"/>
+      <text x="20" y="20" text-anchor="start" font-size="12" font-weight="bold" fill="white">č°čŻä¸˛ĺŁ USART1</text>
+      <text x="20" y="38" text-anchor="start" font-size="10" fill="#d5dbdb">Debug Output</text>
+      <text x="280" y="30" text-anchor="middle" font-size="10" fill="#f4f6f6" font-weight="bold">PA9/PA10</text>
+    </g>
+  </g>
+  
+  <g id="controller-section">
+    <rect x="420" y="150" width="300" height="550" rx="15" fill="url(#controllerGrad)" stroke="#1a5276" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="420" y="150" width="300" height="60" rx="15" fill="#1a5276"/>
+    <rect x="420" y="190" width="300" height="20" fill="#1a5276"/>
+    <text x="570" y="190" text-anchor="middle" font-size="22" font-weight="bold" fill="white">ć§ĺśĺ¨ CONTROLLER</text>
+    
+    <g transform="translate(470, 230)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+      <text x="100" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="white">STM32F103</text>
+      <text x="100" y="60" text-anchor="middle" font-size="14" fill="#85c1e9">ARM Cortex-M3</text>
+    </g>
+    
+    <g transform="translate(440, 330)">
+      <rect x="0" y="0" width="260" height="180" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+      <text x="130" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#f39c12">çśććş State Machine</text>
+      
+      <ellipse cx="60" cy="55" rx="40" ry="20" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+      <text x="60" y="60" text-anchor="middle" font-size="11" fill="white" font-weight="bold">IDLE</text>
+      
+      <ellipse cx="130" cy="90" rx="50" ry="20" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+      <text x="130" y="95" text-anchor="middle" font-size="10" fill="white" font-weight="bold">BELT_RUN</text>
+      
+      <ellipse cx="200" cy="55" rx="40" ry="20" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+      <text x="200" y="60" text-anchor="middle" font-size="11" fill="white" font-weight="bold">PACK</text>
+      
+      <ellipse cx="130" cy="130" rx="40" ry="20" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+      <text x="130" y="135" text-anchor="middle" font-size="11" fill="white" font-weight="bold">STOP</text>
+      
+      <path d="M95 60 Q110 75 115 85" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <path d="M175 85 Q160 70 160 60" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <path d="M60 75 L60 110" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <path d="M200 75 L200 110 L160 110" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <path d="M130 110 L130 75" fill="none" stroke="#ecf0f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+    </g>
+    
+    <g transform="translate(440, 525)">
+      <rect x="0" y="0" width="260" height="155" rx="8" fill="#2c3e50" stroke="#34495e" stroke-width="1"/>
+      <text x="130" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1abc9c">ć§ĺśćľç¨ Process Flow</text>
+      
+      <text x="10" y="48" font-size="10" fill="#aab7b8">1. ä¸˛ĺŁćĽćś 0x9A ĺ˝äť¤</text>
+      <text x="10" y="65" font-size="10" fill="#aab7b8">2. äź ćĺ¨ćŁćľ</text>
+      <text x="10" y="82" font-size="10" fill="#aab7b8">3. éŠąĺ¨ć§čĄćşć</text>
+      <text x="10" y="99" font-size="10" fill="#aab7b8">4. éĄşĺş: ĺ¸ŚčżčĄ+ćĺ</text>
+      <text x="10" y="116" font-size="10" fill="#aab7b8">5. ĺžŞçŻéĺ¤</text>
+      <text x="10" y="140" font-size="10" fill="#e74c3c">çść: IRčŽĄć° | ç°ĺşŚč§Śĺ</text>
+    </g>
+  </g>
+  
+  <g id="actuators-section">
+    <rect x="760" y="95" width="620" height="720" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+    <text x="1070" y="130" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c">ć§čĄćşć OUTPUT</text>
+    <text x="1070" y="150" text-anchor="middle" font-size="12" fill="#7f8c8d">Actuators and Motors</text>
+    
+    <g transform="translate(780, 170)">
+      <rect x="0" y="0" width="185" height="80" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#shadow)"/>
+      <text x="92" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ĺć­Ľĺ¸Śçľćş</text>
+      <text x="92" y="42" text-anchor="middle" font-size="10" fill="#fadbd8">Belt Stepper</text>
+      <text x="92" y="60" text-anchor="middle" font-size="9" fill="#f5b7b1">äź éĺ¸ŚéŠąĺ¨</text>
+      
+      <rect x="200" y="0" width="185" height="80" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#shadow)"/>
+      <text x="292" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ä¸ćçľćş</text>
+      <text x="292" y="42" text-anchor="middle" font-size="10" fill="#fadbd8">Screw Stepper</text>
+      <text x="292" y="60" text-anchor="middle" font-size="9" fill="#f5b7b1">ä¸ćéŠąĺ¨</text>
+    </g>
+    
+    <g transform="translate(780, 270)">
+      <rect x="0" y="0" width="185" height="70" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#shadow)"/>
+      <text x="92" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ĺĺ˛çľćş</text>
+      <text x="92" y="45" text-anchor="middle" font-size="10" fill="#fdebd0">Cutting DC Motor</text>
+      <text x="92" y="60" text-anchor="middle" font-size="9" fill="#f5d5a0">PC6</text>
+      
+      <rect x="200" y="0" width="185" height="70" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#shadow)"/>
+      <text x="292" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ĺčçľćş</text>
+      <text x="292" y="45" text-anchor="middle" font-size="10" fill="#fdebd0">Film Cutting Motor</text>
+      <text x="292" y="60" text-anchor="middle" font-size="9" fill="#f5d5a0">PC9/PD8/PD9</text>
+    </g>
+    
+    <g transform="translate(780, 360)">
+      <rect x="0" y="0" width="185" height="70" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+      <text x="92" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="white">M3 äź éĺ¸Ś</text>
+      <text x="92" y="45" text-anchor="middle" font-size="10" fill="#e8daef">Conveyor Stepper</text>
+      <text x="92" y="60" text-anchor="middle" font-size="9" fill="#d2b4de">ćĺäź é</text>
+      
+      <rect x="200" y="0" width="185" height="70" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+      <text x="292" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="white">M4 ćĺ</text>
+      <text x="292" y="45" text-anchor="middle" font-size="10" fill="#e8daef">Pack Stepper</text>
+      <text x="292" y="60" text-anchor="middle" font-size="9" fill="#d2b4de">ĺčŁéŠąĺ¨</text>
+    </g>
+    
+    <g transform="translate(780, 450)">
+      <rect x="0" y="0" width="185" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#shadow)"/>
+      <text x="92" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ĺśč˝Žäźşć</text>
+      <text x="92" y="40" text-anchor="middle" font-size="10" fill="#aed6f1">STS3020 Impeller</text>
+      <text x="92" y="55" text-anchor="middle" font-size="9" fill="#85c1e9">ID3 / ID8</text>
+      <text x="92" y="70" text-anchor="middle" font-size="9" fill="#5dade2">ĺśč˝Žć§ĺś</text>
+      
+      <rect x="200" y="0" width="185" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#shadow)"/>
+      <text x="292" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="white">čćäźşć</text>
+      <text x="292" y="40" text-anchor="middle" font-size="10" fill="#aed6f1">STS360 Film Rod</text>
+      <text x="292" y="55" text-anchor="middle" font-size="9" fill="#85c1e9">ID2 / ID7</text>
+      <text x="292" y="70" text-anchor="middle" font-size="9" fill="#5dade2">čćć§ĺś</text>
+    </g>
+    
+    <g transform="translate(780, 550)">
+      <rect x="0" y="0" width="580" height="100" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="2" filter="url(#shadow)"/>
+      <text x="290" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#f1c40f">çť§çľĺ¨ Relays</text>
+      
+      <rect x="15" y="35" width="115" height="50" rx="5" fill="#27ae60" stroke="#1e8449" stroke-width="1"/>
+      <text x="72" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="white">K_AIR</text>
+      <text x="72" y="72" text-anchor="middle" font-size="9" fill="#a9dfbf">PB12</text>
+      
+      <rect x="145" y="35" width="115" height="50" rx="5" fill="#27ae60" stroke="#1e8449" stroke-width="1"/>
+      <text x="202" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="white">K_PUMP</text>
+      <text x="202" y="72" text-anchor="middle" font-size="9" fill="#a9dfbf">PB13</text>
+      
+      <rect x="275" y="35" width="115" height="50" rx="5" fill="#27ae60" stroke="#1e8449" stroke-width="1"/>
+      <text x="332" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="white">K_S</text>
+      <text x="332" y="72" text-anchor="middle" font-size="9" fill="#a9dfbf">PA15</text>
+      
+      <rect x="405" y="35" width="115" height="50" rx="5" fill="#16a085" stroke="#117a65" stroke-width="1"/>
+      <text x="462" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Fan E6</text>
+      <text x="462" y="72" text-anchor="middle" font-size="9" fill="#a2d9ce">éŁć</text>
+      
+      <rect x="535" y="35" width="30" height="50" rx="5" fill="#7f8c8d" stroke="#6c7a7a" stroke-width="1"/>
+      <text x="550" y="65" text-anchor="middle" font-size="8" fill="white">...</text>
+    </g>
+    
+    <g transform="translate(780, 670)">
+      <rect x="0" y="0" width="580" height="125" rx="8" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+      <text x="290" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">ć§čĄćľç¨ Execution Flow</text>
+      
+      <text x="15" y="48" font-size="10" fill="#aab7b8">- IDLE: ćĽćś 0x9A ĺ˝äť¤ĺŻĺ¨</text>
+      <text x="15" y="66" font-size="10" fill="#aab7b8">- BELT_RUN: ĺć­Ľĺ¸Ś+ĺĺ˛çľćş, IRčŽĄć°</text>
+      <text x="15" y="84" font-size="10" fill="#aab7b8">- PACK: ĺśč˝Ž+M4+M3+čć2éśćŽľ</text>
+      <text x="15" y="102" font-size="10" fill="#aab7b8">- ç°ĺşŚč§Śĺ: ĺčçľćş CW+CCW</text>
+      <text x="15" y="118" font-size="10" fill="#f1c40f">- STOP: ĺžŞçŻéĺ¤</text>
+    </g>
+  </g>
+  
+  <g id="input-arrows">
+    <path d="M360 205 Q390 205 420 220" fill="none" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <path d="M360 290 Q390 290 420 280" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <path d="M360 370 Q390 370 420 340" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <path d="M360 450 Q390 450 420 400" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <path d="M360 530 Q390 530 420 460" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <path d="M360 610 Q390 610 420 520" fill="none" stroke="#16a085" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <path d="M360 685 Q390 685 420 580" fill="none" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <g id="output-arrows">
+    <path d="M720 250 Q760 250 780 210" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead-red)"/>
+    <path d="M720 260 Q760 260 780 230" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead-red)"/>
+    <path d="M720 310 Q760 310 780 295" fill="none" stroke="#e67e22" stroke-width="2" marker-end="url(#arrowhead-orange)"/>
+    <path d="M720 320 Q760 320 780 315" fill="none" stroke="#e67e22" stroke-width="2" marker-end="url(#arrowhead-orange)"/>
+    <path d="M720 390 Q760 390 780 395" fill="none" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M720 400 Q760 400 780 410" fill="none" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M720 470 Q760 470 780 490" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+    <path d="M720 480 Q760 480 780 505" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+    <path d="M720 550 Q760 550 780 600" fill="none" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+  </g>
+  
+  <g transform="translate(20, 830)">
+    <rect x="0" y="0" width="1360" height="50" rx="5" fill="#2c3e50"/>
+    
+    <g transform="translate(30, 15)">
+      <rect width="15" height="15" fill="#9b59b6" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">éäżĄ</text>
+    </g>
+    
+    <g transform="translate(100, 15)">
+      <rect width="15" height="15" fill="#16a085" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">äź ćĺ¨</text>
+    </g>
+    
+    <g transform="translate(180, 15)">
+      <rect width="15" height="15" fill="#3498db" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">ć§ĺśĺ¨</text>
+    </g>
+    
+    <g transform="translate(260, 15)">
+      <rect width="15" height="15" fill="#e74c3c" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">ć­Ľčżçľćş</text>
+    </g>
+    
+    <g transform="translate(350, 15)">
+      <rect width="15" height="15" fill="#e67e22" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">ç´ćľçľćş</text>
+    </g>
+    
+    <g transform="translate(440, 15)">
+      <rect width="15" height="15" fill="#9b59b6" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">M3/M4</text>
+    </g>
+    
+    <g transform="translate(510, 15)">
+      <rect width="15" height="15" fill="#3498db" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">äźşć</text>
+    </g>
+    
+    <g transform="translate(580, 15)">
+      <rect width="15" height="15" fill="#27ae60" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">çť§çľĺ¨</text>
+    </g>
+    
+    <g transform="translate(660, 15)">
+      <rect width="15" height="15" fill="#7f8c8d" rx="2"/>
+      <text x="22" y="12" font-size="10" fill="white">č°čŻ</text>
+    </g>
+    
+    <g transform="translate(800, 15)">
+      <line x1="0" y1="7" x2="40" y2="7" stroke="#f1c40f" stroke-width="2"/>
+      <polygon points="35,3 42,7 35,11" fill="#f1c40f"/>
+      <text x="50" y="12" font-size="10" fill="white">ć°ćŽćľ</text>
+    </g>
+  </g>
+  
+</svg>

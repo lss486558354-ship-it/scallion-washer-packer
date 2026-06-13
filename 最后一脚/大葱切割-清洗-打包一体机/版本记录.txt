@@ -1,0 +1,20 @@
+版本号：ver_01.00.00
+备份时间：2026_04_05
+更新类型：大版本
+更新内容：
+- 修复了CMD_PROCESS_START命令(AA 30 00 9A)发送后STM32无ACK响应的问题
+- 增大了Protocol任务栈(384→512字)和Process任务栈(384→512字)
+- 修复了USART1互斥锁永久阻塞问题(portMAX_DELAY→5ms超时)
+- 在USART2中断中添加了LED翻转调试，确认硬件中断是否触发
+- 在Protocol_CommChannel_HandleByte中添加了调试日志
+- Protocol_SendACK返回通道改为s_current_channel，确保ACK发到正确的UART
+- 修复了GPIO_TogglePin()中BSRR/BRR逻辑错误导致的LED不闪烁问题（直接使用ODR^=异或翻转）
+
+本次改动原因：
+用户反映AA 30 00 9A命令发送后STM32无ACK响应，但启动日志正常，所有FreeRTOS任务均已启动
+
+验证结果：✅ 验证通过
+- LED初始化阶段闪烁正常
+- 心跳任务运行正常，每10秒翻转一次
+- UART1/UART2串口通讯正常
+- 工艺指令测试正常
