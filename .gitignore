@@ -36,3 +36,8 @@ __pycache__/
 # 操作系统
 .DS_Store
 Thumbs.db
+# Keil 用户界面布局（含本地路径与用户名）
+*.uvguix.*
+
+# 开发期一次性脚本备份
+.backups/

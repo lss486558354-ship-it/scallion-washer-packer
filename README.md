@@ -206,7 +206,6 @@ FreeRTOS 上跑 `Protocol`（收发与解析）与 `Process`（工艺推进）�
 如实记录，避免后来者重复踩坑：
 
 - **`main.c` 1663 行，工艺状态机整个塞在 `BSP_Tick_AppHook1ms()` 一个函数里**。分段逻辑与硬件操作耦合，新增工艺段需要动这个巨型函数。合理方向是把每个工艺段抽成独立的 `step` 结构体（进入/退出/超时回调），用表驱动替换 `switch`。
-- **`project/User/` 下混有约 37 个一次性调试脚本**（`debug_check2.py`…`debug_check8.py`、`apply_v2.py`、`show_indent.py` 等），是开发期用脚本批量改 `main.c` 留下的残渣，与固件运行无关。应当清理或移入 `tools/devscripts/`。
 - **`project/README.md` 已过时**：它描述的是重构前的目录（`motor/bsp_motor.c`、`servo/bsp_servo.c`），实际代码已拆成 `stepper/`、`dc_motor/`、`servo/bsp_servo_obj.c`；文中「需要选型」的表述写于硬件定型之前。**以本 README 与实际代码为准。**
 - **版本号三处不一致**：`project/README.md` 标 V2.1、`main.c` 注释标 V5.0、`版本记录.txt` 标 `ver_01.00.00`。缺统一的版本来源。
 - **`tools/*/main.py` 三个工具同名**，无法在同目录下同时以模块方式导入，只能各自 `cd` 进去运行。
